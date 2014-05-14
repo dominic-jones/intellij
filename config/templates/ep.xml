@@ -39,7 +39,7 @@
   </template>
   <template name="todo" value="// TODO $DATE$ $user$: $END$" description="Dated, named TODO" toReformat="false" toShortenFQNames="true">
     <variable name="DATE" expression="date(&quot;yyyy-MM-dd&quot;)" defaultValue="" alwaysStopAt="false" />
-    <variable name="user" expression="user()" defaultValue="" alwaysStopAt="true" />
+    <variable name="user" expression="user()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
