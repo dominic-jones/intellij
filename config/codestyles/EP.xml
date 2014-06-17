@@ -22,6 +22,7 @@
       <package name="com.elasticpath" withSubpackages="true" static="false" />
     </value>
   </option>
+  <option name="RIGHT_MARGIN" value="150" />
   <GroovyCodeStyleSettings>
     <option name="IMPORT_LAYOUT_TABLE">
       <value>
@@ -55,18 +56,14 @@
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="JAVA">
-    <option name="BLANK_LINES_AROUND_FIELD" value="1" />
+    <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
+    <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
+    <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="1" />
     <option name="BLANK_LINES_AFTER_CLASS_HEADER" value="1" />
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
     <arrangement>
-      <groups>
-        <group>
-          <type>GETTERS_AND_SETTERS</type>
-          <order>KEEP</order>
-        </group>
-      </groups>
       <rules>
         <rule>
           <match>
