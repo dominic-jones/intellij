@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keymap version="1" name="Default for XWin copy" parent="Default for XWin">
+  <action id="Annotate">
+    <keyboard-shortcut first-keystroke="shift alt A" />
+  </action>
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="control W" />
   </action>
@@ -9,7 +12,12 @@
   <action id="Debug">
     <keyboard-shortcut first-keystroke="control F11" />
   </action>
-  <action id="EditorSelectWord" />
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="control Q" />
+  </action>
+  <action id="QuickJavaDoc">
+    <mouse-shortcut keystroke="alt button2" />
+  </action>
   <action id="RerunFailedTests">
     <keyboard-shortcut first-keystroke="shift alt F11" />
   </action>
@@ -33,5 +41,6 @@
   </action>
   <action id="ToggleBookmark" />
   <action id="ToggleBookmarkWithMnemonic" />
+  <action id="VcsHistory.ShowAllAffected" />
 </keymap>
 
