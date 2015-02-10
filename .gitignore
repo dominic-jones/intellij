@@ -1,4 +1,5 @@
 system/
 config/componentVersions/
-*.jar
 *.key
+*.jar
+*.txt
