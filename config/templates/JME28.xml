@@ -1,0 +1,9 @@
+<templateSet group="JME">
+  <template name="panel" value="panel(new PanelBuilder() {{&#10;    $END$&#10;}});" description="Panel" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

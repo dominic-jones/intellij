@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="ep">
   <template name="setup" value="@org.junit.Before&#10;public void setUp() {&#10;    $END$&#10;}" description="JUnit test fixture for Java" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <context>
@@ -85,4 +84,3 @@
     </context>
   </template>
 </templateSet>
-

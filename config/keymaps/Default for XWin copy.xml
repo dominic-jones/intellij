@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <keymap version="1" name="Default for XWin copy" parent="Default for XWin">
   <action id="Annotate">
     <keyboard-shortcut first-keystroke="shift alt A" />
@@ -43,4 +42,3 @@
   <action id="ToggleBookmarkWithMnemonic" />
   <action id="VcsHistory.ShowAllAffected" />
 </keymap>
-

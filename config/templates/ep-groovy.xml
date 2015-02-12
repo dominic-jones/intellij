@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <templateSet group="ep-groovy">
   <template name="setup" value="@org.junit.Before&#10;void setUp() {&#10;    $END$&#10;}" description="JUnit test fixture for Groovy" toReformat="true" toShortenFQNames="true" useStaticImport="true">
     <context>
@@ -83,4 +82,3 @@
     </context>
   </template>
 </templateSet>
-
