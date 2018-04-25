@@ -1,0 +1,98 @@
+<templateSet group="dom">
+  <template name="rwm" value="@org.junit.runner.RunWith(org.mockito.junit.MockitoJUnitRunner.Strict.class)" description="Run with Mockito" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="cap" value="@org.mockito.Captor&#10;private org.mockito.ArgumentCaptor&lt;$type$&gt; $name$Captor;" description="Mockito Captor" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="camelCase(type)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="g" value="org.mockito.BDDMockito.given($collaborator$)&#10;.willReturn($response$);" description="given" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="collaborator" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="response" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="dto" value="@lombok.Data&#10;@lombok.Builder&#10;@lombok.NoArgsConstructor&#10;@lombok.AllArgsConstructor" description="Lombokify" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="softly" value="@org.junit.Rule&#10;public org.assertj.core.api.JUnitSoftAssertions softly = new org.assertj.core.api.JUnitSoftAssertions();" description="AssertJ Soft Assertions" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="setup" value="@org.junit.jupiter.api.BeforeEach&#10;public void setUp(org.assertj.core.api.SoftAssertions softly) {&#10;    this.softly = softly;&#10;    $END$&#10;}" description="JUnit Setup" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="ex" value="&#10;@org.junit.Rule&#10;public org.junit.rules.ExpectedException exception = org.junit.rules.ExpectedException.none();" description="" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="todo" value="// TODO $DATE$ Dom - $END$" description="Todo" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="DATE" expression="date(&quot;yyyy-MM-dd&quot;)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="KOTLIN_CLASS" value="true" />
+      <option name="KOTLIN_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="al" value="com.google.common.collect.Lists.newArrayList($END$)" description="" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ctl" value="java.util.stream.Collectors.toList($END$)" description="" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="m" value="@org.mockito.Mock(answer = org.mockito.Answers.RETURNS_SMART_NULLS)&#10;private $type$ $name$;" description="Mock" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="camelCase(type)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="v" value="org.mockito.Mockito.verify($collaborator$)$END$;" description="Mockito verify" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="collaborator" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="amp" value="@io.swagger.annotations.ApiModelProperty(&quot;$END$&quot;)" description="" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="t" value="@org.junit.Test&#10;public void $name$() {&#10;    $END$&#10;}" description="Test" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="mix" value="import org.qi4j.api.property.Property;&#10;&#10;@org.qi4j.api.mixin.Mixins($name$.$name$Mixin.class)&#10;public interface $name$ {&#10;    abstract class $name$Mixin implements $name$ {&#10;&#10;    }&#10;&#10;    interface $name$State {&#10;        &#10;    }&#10;}" description="" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="lf" value="Logger log = LoggerFactory.getLogger($name$.class);" description="" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>

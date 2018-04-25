@@ -1,0 +1,45 @@
+<templateSet group="dom-kotlin">
+  <template name="t" value="@org.junit.Test&#10;fun $name$() {&#10;    $END$&#10;}" description="Test" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="rwm" value="@org.junit.runner.RunWith(org.mockito.junit.MockitoJUnitRunner::class)" description="Run with Mockito" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="KOTLIN_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="im" value="@org.mockito.InjectMocks&#10;lateinit var $name$ : $type$" description="Inject Mocks" toReformat="false" toShortenFQNames="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="camelCase(type)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="g" value="org.mockito.BDDMockito.given($collaborator$)&#10;    .willReturn($response$)" description="given" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="collaborator" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="response" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="m" value="@org.mockito.Mock(@org.mockito.Mock(answer = org.mockito.Answers.RETURNS_SMART_NULLS)&#10;lateinit var $name$: $type$" description="Mock" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="camelCase(type)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="v" value="verify($collaborator$)$END$" description="Mockito verify" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="collaborator" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="KOTLIN_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="setup" value="@org.junit.jupiter.api.BeforeEach&#10;fun setUp() {&#10;    $END$&#10;}" description="JUnit Setup" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="KOTLIN_CLASS" value="true" />
+    </context>
+  </template>
+</templateSet>
